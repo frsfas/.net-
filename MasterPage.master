@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            text-align: center;
+            width: 524px;
+        }
+        .style4
+        {
+            width: 524px;
+        }
+        .style5
+        {
+            text-align: center;
+            width: 524px;
+            font-size: x-large;
+            color: #FF3300;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td class="style5" 
+                
+                
+                style="font-style: italic; background-color: #C0C0C0; border: medium double #00FF00">
+                <strong>APPOINTMENTS</strong></td>
+        </tr>
+        <tr>
+            <td class="style2" 
+                
+                style="font-style: italic; color: #000000; background-color: #C0C0C0; border: medium double #00FF00">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                    <DynamicItemTemplate>
+<%# Eval("Text") %>
+                    </DynamicItemTemplate>
+                    <Items>
+                        <asp:MenuItem Text="HOME" Value="HOME" NavigateUrl="~/home.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="REGISTER" Value="REGISTER" NavigateUrl="~/PREGISTER.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="LOGIN" Value="LOGIN" NavigateUrl="~/login.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="DOCTOR LOGIN" Value="DOCTOR LOGIN" 
+                            NavigateUrl="~/dlogin.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#66FF66" BorderStyle="Groove" />
+                    <StaticMenuItemStyle BackColor="#66FFFF" BorderColor="Lime" 
+                        BorderStyle="Groove" BorderWidth="5px" Height="20px" ItemSpacing="100px" 
+                        VerticalPadding="5px" Width="100px" />
+                    <StaticSelectedStyle BorderWidth="5px" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-style: italic; color: #000000; background-color: #C0C0C0; border: medium double #00FF00" 
+                class="style4">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        <br />
+                    </p>
+                    
+        
+        </asp:ContentPlaceHolder></td>
+        </tr>
+    </table>
+    <div>
+       
+    </div>
+    </form>
+</body>
+</html>
